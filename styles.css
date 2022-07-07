@@ -2,17 +2,30 @@
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
-}
-html{
-  
+   
 }
 
-body.light{ }
+a{ text-decoration: none }
+
+html{--text-color: #e6e6fa;
+  --button-color: #333333;
+  --text-button:  white;
+  --hover-text: black;
+  --boder-color:#07ffa5;
+  
+}
 
 .caixa {
    text-align: center;
    width: 300px;
    margin: 60px auto;
+}
+html[data-theme=dark]{
+   
+  --button-color:#e9e3e3;
+  --text-button:black;
+  --hover-text: white;
+   --boder-color:white;
 }
 
 body { 
@@ -21,6 +34,7 @@ body {
    font-family: 'Roboto', sans-serif;
    background-size: cover;
    background-repeat: no-repeat;
+   color:var(--text-color);
 }
 
 
@@ -29,13 +43,12 @@ img.avatar {
    border-radius: 50%;
    width: 125px;
    height: 125px;
-   border: #07ffa5 solid 4px;
+   border: var(--boder-color) solid 4px;
    padding: 4px;
    
 }
   
   h1{
-   color: #e6e6fa;
    font-size:  32px;
    margin-top: 48px;
    margin-bottom: 8px;
@@ -46,7 +59,7 @@ img.avatar {
    font-size: 18px;
    font-weight: 400;
    opacity: 0.8;
-   color: #e6e6fa;
+
 }
 
 
@@ -61,8 +74,8 @@ ul li a{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #333333;
-  color: white;
+  background:var(--button-color);
+  color: var(--text-button);
   font-size: 14px;
   border-radius: 6px;
   margin-bottom: 16px;
@@ -70,18 +83,43 @@ ul li a{
 }
  /*333333 ,#08de8f */
  ul li a:hover { background-color: #08de8f;}
- ul li a:hover {color:black}
+ ul li a:hover {color:var(--hover-text)}
 
 footer{
  font-weight: 500;
  font-size: 12px;
- color: #f0f8ff;
  opacity: 0.6;
  transition: opacity 400ms;
 }
 
 footer:hover{opacity: 1;}
 
-footer a{ color: #f0f8ff; }
+footer a{ color: var(--text-color); }
 
 a{ text-decoration: none }
+
+.custom-checkbox input,
+.custom-radio input{
+  display: none;
+}
+
+.custom-checkbox input + label:before {
+  content: '';
+  display:block;
+  margin:0 145px;
+  width: 14px;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #08de8f;
+  border: 1px solid transparent;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  cursor: no-drop;
+}
+
+.custom-checkbox input:checked + label:before {
+
+  background-color: #e9e3e3;
+  border: none;
+  padding: 1px;
+}
