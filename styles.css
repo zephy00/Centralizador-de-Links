@@ -114,7 +114,7 @@ a{ text-decoration: none }
   border: 1px solid transparent;
   margin-right: 8px;
   margin-bottom: 3px;
-  cursor: no-drop;
+  cursor: help;
 }
 
 .custom-checkbox input:checked + label:before {
