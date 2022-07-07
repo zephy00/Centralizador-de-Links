@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
   <head>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +11,30 @@
       <title>Document</title>
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <script src="https://kit.fontawesome.com/3313622884.js" crossorigin="anonymous"></script>    
+  <script src="https://kit.fontawesome.com/3313622884.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+
+  
+
+<script>
+  const changeThemeToDark = () => {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("data-theme", "dark");
+  }
+
+  const changeThemeToLight = () => {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("data-theme", 'light');
+  }
+  let theme = localStorage.getItem('data-theme');
+  if (theme == 'dark') changeThemeToDark();
+</script>
 </head>
 
-<body class="light">
+<body>
+  
+  
+
     
       <div class="caixa">
         <i class="fi fi-brands-github"></i>
@@ -33,7 +53,7 @@
               </li>
       
               <li>
-              <a href="lllllllll"target="_blank"><i class="fa-brands fa-whatsapp">&nbsp;</i> Whatsapp</a>
+              <a href="https://www.instagram.com/__ryuu_/"target="_blank"> <i class="fa-brands fa-whatsapp">&nbsp;</i> Whatsapp</a>
               </li>
       
               <li>
@@ -44,11 +64,20 @@
               <li>
           
               <a href="https://github.com/zephy00" target="_blank"><i class="fa-brands fa-github"> &nbsp; </i> Github</a>
-              </li> 
+              </li>
+              
+              <div class="custom-checkbox"> 
+   
+                <input type="checkbox" name="toggle-dark" id="toggle-dark"> 
+                <label for="toggle-dark"></label>
+                
+              </div>
+            
+              
           </ul>
-
+               
           <footer>
-              created by ayan thanks for visiting 👍
+              created by ayan thanks for visiting 👍 
 
           </footer>
       </div>
